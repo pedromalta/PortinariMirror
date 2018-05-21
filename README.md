@@ -1,2 +1,2 @@
-# PortinariMirror
-SmartMirror Android frontend 
+# base-android-project
+Base for any Android project

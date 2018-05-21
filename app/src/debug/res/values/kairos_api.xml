@@ -1,0 +1,14 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="kairo_api_key" templateMergeStrategy="preserve" translatable="false">c2e3abd86073b234acb71aef8d39f140</string>
+    <string name="kairo_app_id" templateMergeStrategy="preserve" translatable="false">3da9235d</string>
+</resources>
