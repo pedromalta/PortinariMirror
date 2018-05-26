@@ -8,6 +8,8 @@ import android.support.annotation.StringRes;
 import android.support.v4.util.LongSparseArray;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -43,6 +45,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_IMMERSIVE;
+        decorView.setSystemUiVisibility(uiOptions);*/
         if (getLayout() != 0) { //do we have a view?
             if (isDataBinding()) {
                 setDataBinding(DataBindingUtil.setContentView(this, getLayout()));

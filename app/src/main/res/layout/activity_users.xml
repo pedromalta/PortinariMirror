@@ -24,50 +24,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
-            app:menu_color="@color/light_green"
             app:menu_open="arc_left"
-            app:menu_scr="@drawable/ic_directions_car_blue_grey_900_48dp">
+            app:menu_color="@color/white"
+            app:menu_scr="@drawable/ic_face_black_24dp">
 
             <android.support.design.widget.FloatingActionButton
-                android:id="@+id/end_class_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="endClassDialog"
-                app:backgroundTint="@color/red_dark"
-                app:srcCompat="@drawable/ic_highlight_off_blue_grey_900_24dp" />
-
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/infractions_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="showInfractions"
+                android:onClick="listUsers"
                 app:backgroundTint="@color/yellow"
-                app:srcCompat="@drawable/ic_traffic_blue_grey_900_48dp" />
-
-            <!--  <android.support.design.widget.FloatingActionButton
-                  android:id="@+id/behaviours_fab"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:onClick="showNotes"
-                  app:backgroundTint="@color/yellow"
-                  app:srcCompat="@drawable/ic_announcement_blue_grey_900_24dp" /> -->
-
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/notes_fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="showNotes"
-                app:backgroundTint="@color/yellow"
-                app:srcCompat="@drawable/ic_announcement_blue_grey_900_24dp" />
+                app:srcCompat="@drawable/ic_perm_contact_calendar_black_36dp" />
 
 
             <android.support.design.widget.FloatingActionButton
-                android:id="@+id/content_fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="newUser"
                 app:backgroundTint="@color/light_green"
-                app:srcCompat="@drawable/ic_assignment_turned_in_blue_grey_900_24dp" />
+                app:srcCompat="@drawable/ic_add_to_queue_black_36dp" />
 
         </com.sa90.materialarcmenu.ArcMenu>
 

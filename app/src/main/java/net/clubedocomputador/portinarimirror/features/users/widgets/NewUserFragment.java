@@ -1,15 +1,17 @@
 package net.clubedocomputador.portinarimirror.features.users.widgets;
 
-import android.os.Bundle;
-import android.support.design.widget.TextInputEditText;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 import net.clubedocomputador.portinarimirror.R;
-import net.clubedocomputador.portinarimirror.data.local.PreferencesHelper;
 import net.clubedocomputador.portinarimirror.features.base.BaseFragment;
-import net.clubedocomputador.portinarimirror.features.users.UsersPresenter;
+import net.clubedocomputador.portinarimirror.features.faces.FaceView;
 import net.clubedocomputador.portinarimirror.injection.component.FragmentComponent;
-
-import javax.inject.Inject;
 
 import butterknife.BindView;
 
@@ -18,20 +20,19 @@ import butterknife.BindView;
  * Created by pedromalta on 28/03/18.
  */
 
-public class NewUserFragment extends BaseFragment{
+public class NewUserFragment extends BaseFragment implements FaceView.OnPictureTakenListener{
 
     @BindView(R.id.input_name)
-    TextInputEditText username;
+    EditText username;
 
     @BindView(R.id.input_nickname)
-    TextInputEditText nickName;
+    EditText nickName;
 
+    @BindView(R.id.face_recognition)
+    FaceView faceView;
 
-    public void onCreate(Bundle save)
-    {
-        super.onCreate(save);
-        setRetainInstance(true);
-    }
+    @BindView(R.id.face)
+    ImageView face;
 
     @Override
     public int getLayout() {
@@ -45,7 +46,7 @@ public class NewUserFragment extends BaseFragment{
 
     @Override
     protected void attachView(){
-
+        faceView.setOnPictureTakenListener(this);
     }
 
     @Override
@@ -57,7 +58,11 @@ public class NewUserFragment extends BaseFragment{
         return R.string.title_bar_new_user;
     }
 
-
-
-    
+    @Override
+    public void onPictureTaken(byte[] picture) {
+        Glide.with(this).load(picture).into(face);
+        face.setVisibility(View.VISIBLE);
+        faceView.stop();
+        faceView.setVisibility(View.INVISIBLE);
+    }
 }

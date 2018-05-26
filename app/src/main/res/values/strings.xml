@@ -20,6 +20,7 @@
     <!-- User Activity -->
     <string name="edittext_name">Nome completo</string>
     <string name="edittext_nickname">Apelido</string>
+    <string name="label_face">Rosto</string>
 
     <!-- Login Activity -->
     <string name="edittext_username">Usuário</string>

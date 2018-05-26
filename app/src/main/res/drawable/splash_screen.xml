@@ -4,8 +4,8 @@
     <item
         android:drawable="@drawable/bg_design"/>
 
-    <item
+   <!-- <item
         android:scaleType="centerCrop"
-        android:drawable="@drawable/ic_highlight_off_red_a700_18dp"/>
+        android:drawable="@drawable/bg_design"/> -->
 
 </layer-list>

@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".features.users.UsersActivity">
+
     <data>
 
         <variable
@@ -11,46 +12,67 @@
             type="net.clubedocomputador.portinarimirror.data.model.User" />
     </data>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:fitsSystemWindows="true">
-
-        <LinearLayout
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginBottom="8dp"
+            android:textColorHint="@color/white">
 
-            <android.support.design.widget.TextInputLayout
+            <EditText
+                android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp">
+                android:hint="@string/edittext_name"
+                android:inputType="textPersonName"
+                android:text="@={user.name}" />
+        </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/input_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/edittext_name"
-                    android:inputType="textPersonName"
-                    android:text="@={user.name}" />
-            </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textColorHint="@color/white">
 
-            <android.support.design.widget.TextInputLayout
+            <EditText
+                android:id="@+id/input_nickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp">
-
-                <EditText
-                    android:id="@+id/input_nickname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/edittext_nickname"
-                    android:inputType="textPersonName"
-                    android:text="@={user.name}" />
-            </android.support.design.widget.TextInputLayout>
+                android:hint="@string/edittext_nickname"
+                android:inputType="textPersonName"
+                android:text="@={user.name}" />
+        </android.support.design.widget.TextInputLayout>
 
 
-        </LinearLayout>
-    </ScrollView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_face" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/face"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <net.clubedocomputador.portinarimirror.features.faces.FaceView
+                android:id="@+id/face_recognition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
 </layout>

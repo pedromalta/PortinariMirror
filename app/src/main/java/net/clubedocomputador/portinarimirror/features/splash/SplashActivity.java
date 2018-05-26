@@ -27,13 +27,12 @@ public class SplashActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         List<User> usersList = preferences.get(USERS_REGISTERED, new ArrayList<User>());
-        startActivity(FaceActivity.getStartIntent(this));
 
-        /*if (usersList.isEmpty()) {
+        if (usersList.isEmpty()) {
             startActivity(UsersActivity.getStartIntent(this));
         } else {
             startActivity(DashboardActivity.getStartIntent(this));
-        }*/
+        }
 
         finish();
     }

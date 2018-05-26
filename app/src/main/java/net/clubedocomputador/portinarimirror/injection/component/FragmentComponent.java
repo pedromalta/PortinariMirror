@@ -3,6 +3,7 @@ package net.clubedocomputador.portinarimirror.injection.component;
 import dagger.Subcomponent;
 
 import net.clubedocomputador.portinarimirror.features.users.widgets.NewUserFragment;
+import net.clubedocomputador.portinarimirror.features.users.widgets.UserListFragment;
 import net.clubedocomputador.portinarimirror.injection.PerFragment;
 import net.clubedocomputador.portinarimirror.injection.module.FragmentModule;
 
@@ -15,5 +16,6 @@ import net.clubedocomputador.portinarimirror.injection.module.FragmentModule;
 public interface FragmentComponent {
 
     void inject(NewUserFragment newUserFragment);
+    void inject(UserListFragment userListFragment);
 
 }
